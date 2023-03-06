@@ -1,4 +1,4 @@
-const Weather = (data) =>  {
+const Weather = ({data}) =>  {
     return (
 <div>
     <h1>app clima</h1>
