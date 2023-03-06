@@ -9,15 +9,18 @@ import './App.css'
 
 function App() {
 
+  const [location, setLocation]=useState({})
+
   useEffect (()=>{
   axios
   .get (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=2fbf6df31d602a98a70f4bf8194d7b10`)
-  .then(resp => console.log(resp.data))
+  .then(resp => {console.log(resp.data)
+    console.log(resp.data)
+    setLocation(resp.data)})
   .catch ( error => console.error(error) )
   },[])
-
-  
-
+ 
+ 
 
   const [lat, setLat]=useState( 4.6775397)
   const [long, setLong] = useState (-74.1122391)
@@ -34,12 +37,12 @@ function App() {
   function success(pos) {
     const crd = pos.coords;
   
-    console.log("Your current position is:");
-    console.log(`Latitude : ${crd.latitude}`);
+    /*console.log("Your current position is:");*/
+    /*console.log(`Latitude : ${crd.latitude}`);*/
     setLat(crd.latitude)
-    console.log(`Longitude: ${crd.longitude}`);
+    /*console.log(`Longitude: ${crd.longitude}`);*/
     setLong(crd.longitude)
-    console.log(`More or less ${crd.accuracy} meters.`);
+    /*console.log(`More or less ${crd.accuracy} meters.`);*/
 
   }
   
@@ -53,7 +56,7 @@ function App() {
   return (
     <div className="App">
 
-      <Weather></Weather>
+      <Weather data={location}></Weather>
 
 
         
