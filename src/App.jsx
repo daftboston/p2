@@ -13,9 +13,9 @@ function App() {
 
   useEffect (()=>{
   axios
-  .get (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=2fbf6df31d602a98a70f4bf8194d7b10`)
+  .get (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=2fbf6df31d602a98a70f4bf8194d7b10&lang=sp, es&units=metric`)
   .then(resp => {console.log(resp.data)
-    console.log(resp.data)
+    
     setLocation(resp.data)})
   .catch ( error => console.error(error) )
   },[])
