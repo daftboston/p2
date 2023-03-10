@@ -1,9 +1,11 @@
 const Weather = ({data}) =>  {
     return (
-<div>
+<div className="target">
     <h1>app clima</h1>
     <h1>pais : {data.base}</h1>
-    <img src="/icons/01d.png" alt="icons" />
+    <div>
+       <img  src="/m3.jpg" alt="icons"/>
+    </div>
 </div>
 )
 }
