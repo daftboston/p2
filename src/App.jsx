@@ -51,6 +51,7 @@ function App() {
   return (
     <div className="App">
 
+      <img src="/icons/romboy.png" alt="" />
       <Weather data={location} grades={grades}>  </Weather>
 
 
