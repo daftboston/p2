@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing:border-box;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
 }
 
 
@@ -11,10 +11,12 @@
 .App{
     /*codigo funcionando en css background-image: url(./assets/fondo1.png)*/
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content:space-around;
     flex-direction: column;
+    align-items: center;    
+    height: 100vh;
+    font-family: 'Lato', sans-serif; 
+    
     background-size: auto;
     background-image: radial-gradient(circle, azure, rgb(20, 138, 229) );
  
@@ -22,7 +24,12 @@
   
 }
 
-
+.title{
+  color: aliceblue;
+  margin-right: auto;
+  display: flex;
+  
+}
 
 .container{
   display: flex;
@@ -32,6 +39,61 @@
   height: 700px;
   justify-content:space-between;
   
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(241, 250, 255);
+  border-radius: 20px;
+  width: 450px;
+  height: 250px;
+  box-shadow: 5px 5px 5px rgb(104, 129, 138);
+  color: rgb(84, 153, 249);
+  
+}
+.left{
+  margin-right: auto;
+  padding: 15px;
+  
+}
+
+.icon{
+  height: 150px;
+  margin-bottom: auto;
+}
+
+button{
+  margin-top: 100px;
+  
+  color: white;
+  width: 178px;
+  height: 38px;
+  background-color: rgb(76, 177, 236);
+  border-radius: 5px;
+  border-width: 0px;
+  
+  box-shadow: 2px 2px 5px rgb(104, 129, 138)
+
+  
+}
+.temp{
+   font-size: 70px;
+   font-weight: 500;
+   
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.country{
+  font-size: 25px;
+  
+  font-weight:bolder
 }
 
 
@@ -54,6 +116,10 @@ h2{
   
   color: rgb(59, 59, 59);
  
+}
+
+.background{
+  box-shadow: 10px 10px 5px 12px lightblue;
 }
 
 
